@@ -12,9 +12,8 @@
         <title>View Events</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/stylesheet.css">
+        <link href="css/styles.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -34,7 +33,7 @@
                                 <a class="nav-link" href="viewEvents.jsp">View your events</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Pricing</a>
+                                <a class="nav-link" href="contactUs.jsp">Contact us</a>
                             </li>
                         </ul>
                     </div>
@@ -59,7 +58,7 @@
 
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://localhost/eventos", "root", "algofacil");
+                con = DriverManager.getConnection("jdbc:mysql://mysql6008.site4now.net/db_a1e868_grupo1", "a1e868_grupo1", "grupo12023");
                 Statement st = con.createStatement();
                 rs = st.executeQuery("select * from eventss");
 
@@ -80,8 +79,6 @@
                                 <th scope="col">Time</th>
                                 <th scope="col">Location</th>
                                 <th scope="col">Description</th>
-
-
                             </tr>
                         </thead>
                         <tbody>
@@ -99,7 +96,6 @@
                                 <td><%=rs.getString("timeEvent")%></td>
                                 <td><%=rs.getString("Location")%></td>
                                 <td><%=rs.getString("descriptionEvent")%></td>
-
                             </tr>
                             <%}%>
                         </tbody>

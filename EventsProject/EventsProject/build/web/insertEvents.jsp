@@ -15,7 +15,7 @@
             String description = request.getParameter("descriptionEvent");
 
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/eventos", "root", "algofacil");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://mysql6008.site4now.net/db_a1e868_grupo1", "a1e868_grupo1", "grupo12023");
             Statement statement = connection.createStatement();
             
             System.out.println("DEBUGGING - INSERT INTO eventss (nameEvent, dateEvent, timeEvent, Location, descriptionEvent) VALUES ('" + name + "', '" + date + "', '" + time + "', '" + location + "', '" + description + "');");

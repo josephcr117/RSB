@@ -29,7 +29,7 @@
 
                 //Modificacion de datos
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                cone = DriverManager.getConnection("jdbc:mysql://localhost/eventos", "root", "algofacil");
+                cone = DriverManager.getConnection("jdbc:mysql://mysql6008.site4now.net/db_a1e868_grupo1", "a1e868_grupo1", "grupo12023");
                 Statement statement = cone.createStatement();
                 statement.executeUpdate("UPDATE eventss SET nameEvent='" + Name + "', dateEvent='" + date + "', timeEvent= '" + time + "', Location= '" + location +"',descriptionEvent= '" + description + "' WHERE eventID=" + Id);
 
