@@ -17,6 +17,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link href="sweetAlert2/sweetalert2.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
         <script>
             function togglePassword() {
@@ -34,23 +35,33 @@
         </script>
     </head>
     <body>
+        <%
+            String mensaje = (String) request.getAttribute("mensaje");
+            if (mensaje != null && !mensaje.isEmpty()) {
+        %>
+        <script type='text/javascript'>
+            alert('<%= mensaje%>');
+        </script>
+        <%
+            }
+        %>
         <jsp:include page="header.jsp" />
         <div class="container mt-5">
             <div class="card">
                 <div class="card-body">
                     <h2 class="card-title">Register</h2>
-                    <form>
+                    <form method="post" action="Logic_Regsiter">
                         <div class="form-group">
                             <label for="name">Full Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Full Name" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="user@example.com" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="user@example.com" required>
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="********" required>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="********" required>
                         </div>
                         <div class="form-group">
                             <label for="confirmPassword">Confirm Password</label>
@@ -73,5 +84,27 @@
             <br>
         </div>
         <jsp:include page="footer.jsp" />
+        <script src="sweetAlert2/sweetalert2.all.min.js" type="text/javascript"></script>
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+        <script>
+            <c:if test="${not empty requestScope.mensajeError}">
+                                var mensajeError = '<c:out value="${requestScope.mensajeError}"/>';
+                                Swal.fire({
+                                    type: "error",
+                                    title: "Oops...",
+                                    text: mensajeError,
+                                });
+            </c:if>
+        </script>
+        <script>
+            <c:if test="${not empty requestScope.mensajeExito}">
+            var mensajeExito = '<c:out value="${requestScope.mensajeExito}"/>';
+            Swal.fire({
+                type: "success",
+                title: "¡Success!",
+                text: mensajeExito,
+            });
+            </c:if>
+        </script>
     </body>
 </html>

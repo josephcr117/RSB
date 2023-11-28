@@ -4,6 +4,10 @@
     Author     : brianmorales
 --%>
 
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -17,6 +21,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link href="sweetAlert2/sweetalert2.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
         <script>
             function togglePassword() {
@@ -31,20 +36,35 @@
         </script>
     </head>
     <body>
+        <%
+
+            Connection con = null;
+            ResultSet rs = null;
+
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                con = DriverManager.getConnection("jdbc:mysql://mysql6008.site4now.net/db_a1e868_grupo1", "a1e868_grupo1", "grupo12023");
+                Statement st = con.createStatement();
+                rs = st.executeQuery("select * from users");
+
+            } catch (Exception e) {
+            }
+        %>
         <jsp:include page="header.jsp" />
         <div class="container mt-5">
             <div class="card">
                 <div class="card-body">
                     <h2 class="card-title">Login</h2>
-                    <form>
+                    <form method="post" action="Logic_Login">
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="user@example.com" required>
+                            <input type="email" class="form-control" id="email"  name="email" placeholder="user@example.com" required>
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="********" required>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="********" required>
                         </div>
+
                         <div class="input-group-append">
                             <button type="button" class="btn btn-outline-primary eye-button"onclick="togglePassword()">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16">
@@ -55,12 +75,37 @@
                             </button>
                         </div>
                         <br>
-                        <button type="submit" class="btn btn-primary">Login</button>
+                        <button id="btnLogin" type="submit" class="btn btn-primary">Login</button>
                     </form>
                 </div>
             </div>
             <br>
         </div>
         <jsp:include page="footer.jsp" />
+        <script src="sweetAlert2/sweetalert2.all.min.js" type="text/javascript"></script>
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+        <script>
+            <c:if test="${not empty requestScope.mensajeError}">
+                                var mensajeError = '<c:out value="${requestScope.mensajeError}"/>';
+                                Swal.fire({
+                                    type: "error",
+                                    title: "Oops...",
+                                    text: mensajeError,
+                                });
+            </c:if>
+        </script>
+        <script>
+            <c:if test="${not empty requestScope.mensajeExito}">
+            var mensajeExito = '<c:out value="${requestScope.mensajeExito}"/>';
+            Swal.fire({
+                type: "success",
+                title: "¡Success!",
+                text: mensajeExito,
+            }).then(function () {
+
+                window.location.href = "first_page.jsp";
+            });
+            </c:if>
+        </script>
     </body>
 </html>
