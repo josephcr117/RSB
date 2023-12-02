@@ -32,7 +32,7 @@
                     <h1 class="display-4">Create</h1>
                     <p class="lead">You can easily Create New Upcoming Events</h1>
                     <div class="video-container">
-                        <video width="100%" height="auto" autoplay>
+                        <video width="100%" height="auto" autoplay loop muted>
                             <source src="video/create.mp4" type="video/mp4">
                             Your browser does not support the <code>video</code> tag.
                         </video>
@@ -43,7 +43,7 @@
                     <h1 class="display-4">Read</h1>
                     <p class="lead">You can read events that are upcoming for you!</h1>
                     <div class="video-container">
-                        <video width="100%" height="auto" autoplay>
+                        <video width="100%" height="auto" autoplay loop muted>
                             <source src="video/read.mp4" type="video/mp4">
                             Your browser does not support the <code>video</code> tag.
                         </video>
@@ -54,7 +54,7 @@
                     <h1 class="display-4">Update</h1>
                     <p class="lead">Update any event that you had previously created!</h1>
                     <div class="video-container">
-                        <video width="100%" height="auto" autoplay>
+                        <video width="100%" height="auto" autoplay loop muted>
                             <source src="video/update.mp4" type="video/mp4">
                             Your browser does not support the <code>video</code> tag.
                         </video>
@@ -65,7 +65,7 @@
                     <h1 class="display-4">Delete</h1>
                     <p class="lead">Need to delete an event, no problem you can do that too!</h1>
                     <div class="video-container">
-                        <video width="100%" height="auto" autoplay>
+                        <video width="100%" height="auto" autoplay loop muted>
                             <source src="video/delete.mp4" type="video/mp4">
                             Your browser does not support the <code>video</code> tag.
                         </video>

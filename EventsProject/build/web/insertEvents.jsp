@@ -1,3 +1,5 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%@page import= "java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,29 +9,29 @@
         <title>Events</title>
     </head>
     <body>
-        <%//Logica de el insert de peliculas 
-            String name = request.getParameter("nameEvent");
-            String date = request.getParameter("dateEvent");
-            String time = request.getParameter("timeEvent");
-            String location = request.getParameter("Location");
-            String description = request.getParameter("descriptionEvent");
+        
+        <sql:setDataSource driver="com.mysql.cj.jdbc.Driver" 
+                           url="jdbc:mysql://mysql6008.site4now.net/db_a1e868_grupo1" 
+                           user="a1e868_grupo1" 
+                           password="grupo12023" />
 
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://mysql6008.site4now.net/db_a1e868_grupo1", "a1e868_grupo1", "grupo12023");
-            Statement statement = connection.createStatement();
-            
-            System.out.println("DEBUGGING - INSERT INTO eventss (nameEvent, dateEvent, timeEvent, Location, descriptionEvent) VALUES ('" + name + "', '" + date + "', '" + time + "', '" + location + "', '" + description + "');");
+        <sql:update var="var">
+            INSERT INTO eventss (nameEvent, dateEvent, timeEvent, Location, descriptionEvent)
+            VALUES (?, ?, ?, ?, ?)
+            <sql:param value="${param.nameEvent}"></sql:param>
+            <sql:param value="${param.dateEvent}"></sql:param>
+            <sql:param value="${param.timeEvent}"></sql:param>
+            <sql:param value="${param.Location}"></sql:param>
+            <sql:param value="${param.descriptionEvent}"></sql:param>
+        </sql:update>
 
-            String instersql = "INSERT INTO eventss (nameEvent, dateEvent, timeEvent, Location, descriptionEvent) VALUES ('" + name + "', '" + date + "', '" + time + "', '" + location + "', '" + description + "');";
+        <sql:query var="result">
+            SELECT * FROM eventss ORDER BY eventID DESC
+        </sql:query>
 
-            statement.executeUpdate(instersql);
-
-            out.println("<script type='text/javascript'>alert('Evento añadido');</script>");
-
-            RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-            rd.include(request, response);
-
-        %>
+        <c:redirect url="index.jsp">
+            <c:param name="event" value="${result.rows[0].eventID}"></c:param>
+        </c:redirect>
 
     </body>
 </html>

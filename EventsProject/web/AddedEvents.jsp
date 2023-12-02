@@ -28,23 +28,23 @@
                     <form action="insertEvents.jsp" method="post">
                         <div class="form-group">
                             <label for="name">Name of the Event</label>
-                            <input type="text" class="form-control" id="nameEvent" name="nameEvent" placeholder="Wedding Party" required>
+                            <input type="text" class="form-control" id="nameEvent" name="nameEvent" value="" required>
                         </div>
                         <div class="form-group">
                             <label for="date">Date</label>
-                            <input type="date" class="form-control" id="dateEvent" name="dateEvent" placeholder="mm/dd/yyyy" required>
+                            <input type="date" class="form-control" id="dateEvent" name="dateEvent" placeholder="mm/dd/yyyy" value="" required>
                         </div>
                         <div class="form-group">
                             <label for="time">Time</label>
-                            <input type="time" class="form-control" id="timeEvent" name="timeEvent" placeholder="8:00pm" required>
+                            <input type="time" class="form-control" id="timeEvent" name="timeEvent" value="" required>
                         </div>
                         <div class="form-group">
                             <label for="address">Address</label>
-                            <input type="text" class="form-control" id="Location" name="Location" placeholder="123 Main St, City, Province" required>
+                            <input type="text" class="form-control" id="Location" name="Location" placeholder="123 Main St, City, Province" value="" required>
                         </div>
                         <div class="form-group">
                             <label for="description">Description</label>
-                            <input type="text" class="form-control" id="descriptionEvent" name="descriptionEvent" placeholder="Wedding party with 25 people" required>
+                            <input type="text" class="form-control" id="descriptionEvent" name="descriptionEvent" value="" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
