@@ -16,7 +16,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
-
+        <link rel="icon" type="image/png" href="Imagenes/RSB_EventHub.png">
         <title>Add Events</title>
     </head>
     <body>

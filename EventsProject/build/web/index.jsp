@@ -1,9 +1,7 @@
-
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,8 +13,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+        <link rel="icon" type="image/png" href="Imagenes/RSB_EventHub.png">
     </head>
-    <body>
+    <body class="bg-dark">
         <jsp:include page="header.jsp" />
         <section>
             <div class="container mt-5">

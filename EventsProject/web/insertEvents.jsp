@@ -32,6 +32,5 @@
         <c:redirect url="index.jsp">
             <c:param name="event" value="${result.rows[0].eventID}"></c:param>
         </c:redirect>
-
     </body>
 </html>

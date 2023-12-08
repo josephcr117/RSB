@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link href="sweetAlert2/sweetalert2.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+        <link rel="icon" type="image/png" href="Imagenes/RSB_EventHub.png">
         <script>
             function togglePassword() {
                 var passwordField = document.getElementById("password");
@@ -53,7 +54,7 @@
                     <form method="post" action="Logic_Regsiter">
                         <div class="form-group">
                             <label for="name">Full Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Rashid Steven Brian" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>

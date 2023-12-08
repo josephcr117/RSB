@@ -11,6 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+        <link rel="icon" type="image/png" href="Imagenes/RSB_EventHub.png">
         <title>JSP Page</title>
     </head>
     <body>
@@ -46,10 +47,8 @@
                         <a href="index.jsp" class="dropdown-item">Go out</a>
                     </div>
                 </div>
-
             </div>
         </nav>
-
         <section>
             <div class="container mt-5">
                 <div class="jumbotron">
@@ -59,7 +58,6 @@
                     <p>Sign up to start organizing your events and sending personalized invitations.</p>
                     <a class="btn btn-primary btn-lg" href="register.jsp" role="button">Register Now!</a>
                 </div>
-
                 <div class="jumbotron">
                     <h1 class="display-4">Create</h1>
                     <p class="lead">You can easily Create New Upcoming Events</h1>
@@ -70,7 +68,6 @@
                         </video>
                     </div>
                 </div>
-
                 <div class="jumbotron">
                     <h1 class="display-4">Read</h1>
                     <p class="lead">You can read events that are upcoming for you!</h1>
@@ -81,7 +78,6 @@
                         </video>
                     </div>
                 </div>
-
                 <div class="jumbotron">
                     <h1 class="display-4">Update</h1>
                     <p class="lead">Update any event that you had previously created!</h1>
@@ -92,7 +88,6 @@
                         </video>
                     </div>
                 </div>
-
                 <div class="jumbotron">
                     <h1 class="display-4">Delete</h1>
                     <p class="lead">Need to delete an event, no problem you can do that too!</h1>
@@ -103,10 +98,8 @@
                         </video>
                     </div>
                 </div>
-
             </div>
         </section>
         <jsp:include page="footer.jsp" />
-        
     </body>
 </html>

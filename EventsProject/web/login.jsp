@@ -23,6 +23,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link href="sweetAlert2/sweetalert2.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+        <link rel="icon" type="image/png" href="Imagenes/RSB_EventHub.png">
         <script>
             function togglePassword() {
                 var passwordField = document.getElementById("password");
@@ -103,7 +104,7 @@
                 text: mensajeExito,
             }).then(function () {
 
-                window.location.href = "first_page.jsp";
+                window.location.href = "dashboard.jsp";
             });
             </c:if>
         </script>
