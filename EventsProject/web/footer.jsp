@@ -30,7 +30,7 @@
                                     <li class="nav-item mb-2"><a href="index.jsp" class="nav-link p-0 text-body-secondary">Home</a></li>
                                     <li class="nav-item mb-2"><a href="unsubscribe.jsp" class="nav-link p-0 text-body-secondary">Unsubscribe</a></li>
                                     <li class="nav-item mb-2"><a href="contactUs.jsp" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary  d-none">About</a></li>
+                                    <li class="nav-item mb-2"><a href="about-us.jsp" class="nav-link p-0 text-body-secondary  d-none">About Us</a></li>
                                 </ul>
                             </div>
 

@@ -33,7 +33,7 @@
                                 <a class="nav-link" href="contactUs2.jsp">Contact us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About us</a>
+                                <a class="nav-link" href="about-us2.jsp">About us</a>
                             </li>
                         </ul>
                     </div>
@@ -44,15 +44,7 @@
                         <li class="nav-item">
                             <button id="theme-toggle" class="btn btn-primary">Toggle Theme</button>
                         </li>
-                        <div class="dropdown">
-                            <a style="color: black" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sign off</a>
-                            <div class="dropdown-menu text-center">          
-                                <img src="Imagenes/images.jpg" alt=""/><br>                      
-                                <a>example@gmail.com</a>
-                                <div class="dropdown-divider"></div>
-                                <a href="index.jsp" class="dropdown-item">Go out</a>
-                            </div>
-                        </div>
+                        <li><a class="btn btn-danger" href="index.jsp">Sign Out</a></li>
                     </ul>
                 </div>
             </div>

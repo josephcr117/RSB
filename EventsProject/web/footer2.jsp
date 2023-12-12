@@ -32,7 +32,7 @@
                                     <li class="nav-item mb-2"><a href="viewEvents.jsp" class="nav-link p-0 text-body-secondary">View your events</a></li>
                                     <li class="nav-item mb-2"><a href="unsubscribe.jsp" class="nav-link p-0 text-body-secondary">Unsubscribe</a></li>
                                     <li class="nav-item mb-2"><a href="contactUs2.jsp" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                                    <li class="nav-item mb-2"><a href="about-us2.jsp" class="nav-link p-0 text-body-secondary">About Us</a></li>
 
                                 </ul>
                             </div>

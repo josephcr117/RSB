@@ -36,8 +36,8 @@
             <div class="row">
                 <jsp:include page="sidebar.jsp"/>
                 <div class="container mt-5">
-                    <div class="row">
-                        <div class="col-md-6">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
                             <div class="card">
                                 <div class="card-body">
                                     <h2 class="mt-4">Settings</h2>

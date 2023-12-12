@@ -19,43 +19,48 @@
         <link rel="icon" type="image/png" href="Imagenes/RSB_EventHub.png">
     </head>
     <body>
-        <jsp:include page="header2.jsp" />
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h1 class="mb-4">Contact us</h1>
-                            <%--The action is for the API --%>
-                            <form action="https://formsubmit.co/reventhub@gmail.com" method="POST">
-                                <div class="form-group">
-                                    <label for="Nombre">Nombre</label>
-                                    <input type="text" class="form-control" name="name">
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <jsp:include page="header2.jsp" />
+                <div class="container mt-5">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h1 class="mb-4">Contact us</h1>
+                                    <%--The action is for the API --%>
+                                    <form action="https://formsubmit.co/reventhub@gmail.com" method="POST">
+                                        <div class="form-group">
+                                            <label for="Nombre">Name</label>
+                                            <input type="text" class="form-control" name="name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="subject">Subject</label>
+                                            <input type="text" class="form-control" name="subject">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="comments">Comments</label>
+                                            <textarea class="form-control" name="comments" cols="15" rows="5"></textarea>
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-md-12 text-center">
+                                                <%--This is the button that sends the email--%>
+                                                <input type="submit" class="btn btn-primary" value="Enviar">
+                                                <%--This input is to return to the indexl--%>
+                                                <input type="hidden" name="_next" value="http://localhost:8080/EventsProject/">
+                                                <%--With this we remove the captcha--%>
+                                                <input type="hidden" name="_captcha" value="false">
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
-                                <div class="form-group">
-                                    <label for="subject">Asunto</label>
-                                    <input type="text" class="form-control" name="subject">
-                                </div>
-                                <div class="form-group">
-                                    <label for="comments">Comentario</label>
-                                    <textarea class="form-control" name="comments" cols="15" rows="5"></textarea>
-                                </div>
-                                <div class="row mt-4">
-                                    <div class="col-md-12 text-center">
-                                        <%--This is the button that sends the email--%>
-                                        <input type="submit" class="btn btn-primary" value="Enviar">
-                                        <%--This input is to return to the indexl--%>
-                                        <input type="hidden" name="_next" value="http://localhost:8080/EventsProject/">
-                                        <%--With this we remove the captcha--%>
-                                        <input type="hidden" name="_captcha" value="false">
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
                         </div>
+                        <jsp:include page="footer2.jsp" />
                     </div>
                 </div>
             </div>
         </div>
-       <jsp:include page="footer2.jsp" />
     </body>
 </html>

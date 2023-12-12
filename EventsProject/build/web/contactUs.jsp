@@ -23,15 +23,15 @@
                             <%--The action is for the API --%>
                             <form action="https://formsubmit.co/reventhub@gmail.com" method="POST">
                                 <div class="form-group">
-                                    <label for="Nombre">Nombre</label>
+                                    <label for="Nombre">Name</label>
                                     <input type="text" class="form-control" name="name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="subject">Asunto</label>
+                                    <label for="subject">Subject</label>
                                     <input type="text" class="form-control" name="subject">
                                 </div>
                                 <div class="form-group">
-                                    <label for="comments">Comentario</label>
+                                    <label for="comments">Comments</label>
                                     <textarea class="form-control" name="comments" cols="15" rows="5"></textarea>
                                 </div>
                                 <div class="row mt-4">
