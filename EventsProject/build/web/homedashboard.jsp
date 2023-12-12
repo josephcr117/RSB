@@ -30,7 +30,7 @@
                         <h1 class="display-4">Create</h1>
                         <p class="lead">You can easily Create New Upcoming Events</p>
                     </div>
-                    <jsp:include page="footer.jsp" />
+                    <jsp:include page="footer2.jsp" />
                 </div>
             </div>
         </div>

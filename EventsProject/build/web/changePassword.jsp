@@ -51,13 +51,21 @@
                             <sql:param value="${currentUserEmail}"></sql:param>
                         </sql:update>
 
-                        <c:out value="DEBUG: Password updated successfully!" />
-                        <c:set var="serverMessage" value="Password updated successfully!" />
+                        <%
+                            String changemessage = "";
+                            changemessage = "Password updated successfully!";
+                            request.setAttribute("mensajeExito", changemessage);
+                            RequestDispatcher rd = request.getRequestDispatcher("settings.jsp");
+                            rd.forward(request, response);%>                         
                     </c:if>
 
                     <c:if test="${not currentPasswordCorrect}">
-                        <c:out value="DEBUG: Passwords do not match or current password is incorrect." />
-                        <c:set var="serverMessage" value="Error: Passwords do not match or current password is incorrect." />
+                        <%
+                            String mensajeError = "";
+                            mensajeError = "Passwords do not match or current password is incorrect.";
+                            request.setAttribute("mensajeError", mensajeError);
+                            RequestDispatcher r = request.getRequestDispatcher("settings.jsp");
+                            r.forward(request, response);%> %>                                        
                     </c:if>
                 </c:if>
             </c:when>

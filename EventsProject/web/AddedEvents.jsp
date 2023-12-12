@@ -15,12 +15,13 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link href="sweetAlert2/sweetalert2.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
         <link rel="icon" type="image/png" href="Imagenes/RSB_EventHub.png">
         <title>Add Events</title>
     </head>
     <body>
-        <jsp:include page="header.jsp" />
+        <jsp:include page="header2.jsp" />
         <div class="container mt-5">
             <div class="card">
                 <div class="card-body">
@@ -53,6 +54,7 @@
             </div>
             <br>
         </div>
-        <jsp:include page="footer.jsp" />
+        <jsp:include page="footer2.jsp" />
+        
     </body>
 </html>

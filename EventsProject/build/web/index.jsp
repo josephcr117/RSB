@@ -15,7 +15,7 @@
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
         <link rel="icon" type="image/png" href="Imagenes/RSB_EventHub.png">
     </head>
-    <body class="bg-dark">
+    <body >
         <jsp:include page="header.jsp" />
         <section>
             <div class="container mt-5">

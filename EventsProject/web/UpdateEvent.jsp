@@ -24,7 +24,8 @@
             String time = request.getParameter("timeEvent");
             String location = request.getParameter("Location");
             String description = request.getParameter("descriptionEvent");
-
+            String mensajeModify = "";
+            
             try {
 
                 //Modificacion de datos
@@ -33,11 +34,16 @@
                 Statement statement = cone.createStatement();
                 statement.executeUpdate("UPDATE eventss SET nameEvent='" + Name + "', dateEvent='" + date + "', timeEvent= '" + time + "', Location= '" + location +"',descriptionEvent= '" + description + "' WHERE eventID=" + Id);
 
-                out.println("<script type='text/javascript'>alert('Se actualizó correctamente');</script>");
+                 mensajeModify = "¡Successful modify!";
+                request.setAttribute("mensajeExito", mensajeModify);
+                RequestDispatcher rd = request.getRequestDispatcher("viewEvents.jsp");
+                rd.forward(request, response);
 
-                response.sendRedirect("index.jsp");
+                
 
             } catch (Exception ex) {
+                mensajeModify = "Error";
+                request.setAttribute("mensajeError", mensajeModify);
                 out.println("<script type='text/javascript'>alert('Error');</script>");
             }
 

@@ -21,9 +21,10 @@
 
         <%
             //Llamado de variables 
-            String  eventID= request.getParameter("eventID");
+            String eventID = request.getParameter("eventID");
             Connection cone = null;
             ResultSet result = null;
+            String mensajeBienvenida = "";
 
             try {
                 //Conexion para el delete 
@@ -32,11 +33,16 @@
                 Statement statement = cone.createStatement();
                 statement.executeUpdate("DELETE from eventss where eventID=" + eventID);
 
-                out.println("<script type='text/javascript'>alert('Se borró correctamente');</script>");
+                mensajeBienvenida = "¡Successful removal!";
+                request.setAttribute("mensajeExito", mensajeBienvenida);
+                RequestDispatcher rd = request.getRequestDispatcher("viewEvents.jsp");
+                rd.forward(request, response);
 
-                response.sendRedirect("index.jsp");
+                
 
             } catch (Exception ex) {
+                mensajeBienvenida = "Error";
+                request.setAttribute("mensajeError", mensajeBienvenida);
                 out.println("<script type='text/javascript'>alert('Error');</script>");
             }
 

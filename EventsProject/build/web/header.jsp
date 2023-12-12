@@ -26,17 +26,14 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="container-fluid">
-                    </button>
+
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a href="AddedEvents.jsp" class="nav-link active" aria-current="page">Add a new Event</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="viewEvents.jsp">View your events</a>
-                            </li>
+                        <ul class="navbar-nav">                           
                             <li class="nav-item">
                                 <a class="nav-link" href="contactUs.jsp">Contact us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About us</a>
                             </li>
                         </ul>
                     </div>
@@ -44,6 +41,9 @@
 
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <button id="theme-toggle" class="btn btn-primary">Toggle Theme</button>
+                        </li>
                         <li class="nav-item">
                             <a class="btn btn-primary ms-10 login-button" href="login.jsp">Login</a>
                         </li>
@@ -54,5 +54,32 @@
                 </div>
             </div>
         </nav>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var themeToggle = document.getElementById("theme-toggle");
+                var body = document.body;
+
+                // Obtiene el valor almacenado en localStorage
+                var isDarkMode = localStorage.getItem("darkMode");
+
+                // Verifica si se ha establecido previamente el modo oscuro
+                if (isDarkMode === "enabled") {
+                    body.classList.add("dark-mode");
+                }
+
+                // Agrega un evento de clic al botón
+                themeToggle.addEventListener("click", function () {
+                    // Cambia entre los estilos de modo oscuro y modo claro
+                    body.classList.toggle("dark-mode");
+
+                    // Guarda la configuración en localStorage
+                    if (body.classList.contains("dark-mode")) {
+                        localStorage.setItem("darkMode", "enabled");
+                    } else {
+                        localStorage.setItem("darkMode", "disabled");
+                    }
+                });
+            });
+        </script>
     </body>
 </html>

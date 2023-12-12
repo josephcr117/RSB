@@ -1,7 +1,7 @@
 <%-- 
-    Document   : header
-    Created on : Nov 26, 2023, 3:12:18 PM
-    Author     : brianmorales
+    Document   : header2
+    Created on : 26 nov 2023, 22:35:03
+    Author     : steven
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -21,7 +21,7 @@
     <body>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.jsp">RSB EventHub</a>
+                <a class="navbar-brand" href="dashboard.jsp">RSB EventHub</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -30,7 +30,7 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">                           
                             <li class="nav-item">
-                                <a class="nav-link" href="contactUs.jsp">Contact us</a>
+                                <a class="nav-link" href="contactUs2.jsp">Contact us</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">About us</a>
@@ -44,12 +44,15 @@
                         <li class="nav-item">
                             <button id="theme-toggle" class="btn btn-primary">Toggle Theme</button>
                         </li>
-                        <li class="nav-item">
-                            <a class="btn btn-primary ms-10 login-button" href="login.jsp">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-primary ms-10 register-button" href="register.jsp">Register</a>
-                        </li>
+                        <div class="dropdown">
+                            <a style="color: black" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sign off</a>
+                            <div class="dropdown-menu text-center">          
+                                <img src="Imagenes/images.jpg" alt=""/><br>                      
+                                <a>example@gmail.com</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="index.jsp" class="dropdown-item">Go out</a>
+                            </div>
+                        </div>
                     </ul>
                 </div>
             </div>

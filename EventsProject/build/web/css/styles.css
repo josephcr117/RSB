@@ -1,3 +1,15 @@
+
+.footer-container {
+    background-color: #f8f9fa; /* Color de fondo del contenedor del footer, cámbialo según tus preferencias */
+    padding: 20px; /* Espaciado interno dentro del contenedor, ajusta según sea necesario */
+    border-radius: 10px; /* Borde redondeado, ajusta según sea necesario */
+    margin-top: 20px; /* Espacio superior, ajusta según sea necesario */
+}
+
+.dark-mode {
+    background-color: #343a40; /* Color de fondo en modo oscuro */
+    color: #343a40; /* Color del texto en modo oscuro */
+}
 .btn-primary {
     color: #fff;
     background-color: #0a39ef;

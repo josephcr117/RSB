@@ -14,7 +14,7 @@
                            url="jdbc:mysql://mysql6008.site4now.net/db_a1e868_grupo1" 
                            user="a1e868_grupo1" 
                            password="grupo12023" />
-
+        
         <sql:update var="var">
             INSERT INTO eventss (nameEvent, dateEvent, timeEvent, Location, descriptionEvent)
             VALUES (?, ?, ?, ?, ?)
@@ -29,8 +29,10 @@
             SELECT * FROM eventss ORDER BY eventID DESC
         </sql:query>
 
-        <c:redirect url="index.jsp">
-            <c:param name="event" value="${result.rows[0].eventID}"></c:param>
-        </c:redirect>
+            <% String addEvents = "";
+                addEvents = "¡Event added successfully!";
+                request.setAttribute("mensajeExito", addEvents);
+                RequestDispatcher rd = request.getRequestDispatcher("viewEvents.jsp");
+                rd.forward(request, response);%>
     </body>
 </html>

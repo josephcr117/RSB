@@ -1,7 +1,7 @@
 <%-- 
-    Document   : footer
-    Created on : Nov 26, 2023, 3:13:15 PM
-    Author     : brianmorales
+    Document   : footer2
+    Created on : 9 dic 2023, 00:36:12
+    Author     : steven
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -27,10 +27,13 @@
                         <div class="row">
                             <div class="col-6 col-md-2 mb-3">
                                 <ul class="nav flex-column">
-                                    <li class="nav-item mb-2"><a href="index.jsp" class="nav-link p-0 text-body-secondary">Home</a></li>
+                                    <li class="nav-item mb-2"><a href="dashboard.jsp" class="nav-link p-0 text-body-secondary">Home</a></li>
+                                    <li class="nav-item mb-2"><a href="AddedEvents.jsp" class="nav-link p-0 text-body-secondary">Add a New Event</a></li>
+                                    <li class="nav-item mb-2"><a href="viewEvents.jsp" class="nav-link p-0 text-body-secondary">View your events</a></li>
                                     <li class="nav-item mb-2"><a href="unsubscribe.jsp" class="nav-link p-0 text-body-secondary">Unsubscribe</a></li>
-                                    <li class="nav-item mb-2"><a href="contactUs.jsp" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary  d-none">About</a></li>
+                                    <li class="nav-item mb-2"><a href="contactUs2.jsp" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
+                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+
                                 </ul>
                             </div>
 
@@ -67,15 +70,16 @@
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
                             </div>
+
                         </div>
 
                         <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                            <p>© 2023 RSB EventHub. All rights reserved.</p>
                             <ul class="list-unstyled d-flex">
                                 <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
                                 <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
                                 <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
                             </ul>
+                            <p>© 2023 RSB EventHub. All rights reserved.</p>
                         </div>
                     </footer>
                 </div>
